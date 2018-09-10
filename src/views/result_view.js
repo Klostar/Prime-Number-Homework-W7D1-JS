@@ -10,9 +10,14 @@ ResultView.prototype.bindEvents = function () {
   });
 };
 
-ResultView.prototype.displayResult = function (result) {
+ResultView.prototype.displayResult = function (results) {
   const resultElement = document.querySelector('#result');
-  // console.log('result', result);
+  if(results.isPrime === true){
+    resultElement.textContent = `Yes ${results.number} is a prime number`;
+  }
+  else{
+    resultElement.textContent = `No ${results.number} is not a prime number`;
+  }
 };
 
 
